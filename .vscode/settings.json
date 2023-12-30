@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.clang-format": "yaml",
+        "*.clang-tidy": "yaml",
+        "cstdio": "cpp"
+    }
+}
