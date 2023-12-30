@@ -26,7 +26,7 @@
         {                                                                                                                                  \
             cudaError_t _e = (call);                                                                                                       \
             if (_e != cudaSuccess) {                                                                                                       \
-                std::cout << "CUDA Runtime failure: '#" << _e << "' at " << __FILE__ << ":" << __LINE__ << std::endl;                      \
+                ::wprintf_s(L"CUDA Runtime failure: #%d in: %s @ line: %d\n", _e, __FILEW__, __LINE__);                                    \
                 exit(1);                                                                                                                   \
             }                                                                                                                              \
         }
@@ -35,7 +35,7 @@
         {                                                                                                                                  \
             nvjpegStatus_t _e = (call);                                                                                                    \
             if (_e != NVJPEG_STATUS_SUCCESS) {                                                                                             \
-                std::cout << "NVJPEG failure: '#" << _e << "' at " << __FILE__ << ":" << __LINE__ << std::endl;                            \
+                ::wprintf_s(L"nvJPEG failure: #%d in: %s @ line: %d\n", _e, __FILEW__, __LINE__);                                          \
                 exit(1);                                                                                                                   \
             }                                                                                                                              \
         }
